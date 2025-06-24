@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 24px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="rgba(255,255,255,0.1)"/></svg>') center/cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #FF8C42, #FFD700);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,140,66,0.4);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #4A90E2, #7B68EE);
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Teachers Slider */
+        .teachers-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .teachers-track {
+            display: flex;
+            animation: slide 20s linear infinite;
+            gap: 2rem;
+        }
+
+        .teacher-card {
+            min-width: 300px;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .teacher-card:hover {
+            transform: scale(1.05);
+        }
+
+        .teacher-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4A90E2, #7B68EE);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .teacher-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .teacher-subject {
+            color: #4A90E2;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .teacher-experience {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Timetable */
+        .timetable {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .timetable-header {
+            background: linear-gradient(135deg, #4A90E2, #7B68EE);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .timetable-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1px;
+            background: #f0f0f0;
+        }
+
+        .time-slot {
+            background: white;
+            padding: 1.5rem;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .time-slot:hover {
+            background: #f8f9ff;
+        }
+
+        .time-slot-time {
+            font-weight: 600;
+            color: #4A90E2;
+            margin-bottom: 0.5rem;
+        }
+
+        .time-slot-subject {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .time-slot-teacher {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .time-slot-grade {
+            background: #FFD700;
+            color: #333;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        /* Facilities Grid */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .facility-card {
+            text-align: center;
+        }
+
+        .facility-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4A90E2, #7B68EE);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .facility-card:hover .facility-icon {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(74,144,226,0.3);
+        }
+
+        .facility-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .facility-description {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Free Content Buttons */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .content-button {
+            background: linear-gradient(45deg, #FF8C42, #FFD700);
+            color: white;
+            padding: 1.5rem;
+            border: none;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .content-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,140,66,0.4);
+        }
+
+        .content-button i {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #4A90E2;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #4A90E2;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #4A90E2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #7B68EE;
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .teacher-card {
+                min-width: 250px;
+            }
+
+            .timetable-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4A90E2, #7B68EE);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(74,144,226,0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(74,144,226,0.4);
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            display: none;
+        }
+
+        .scroll-top.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                Vidura.lk
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">මුල් පිටුව</a></li>
+                    <li><a href="#teachers">ගුරුවරු</a></li>
+                    <li><a href="#timetable">කාල සටහන</a></li>
+                    <li><a href="#facilities">පහසුකම්</a></li>
+                    <li><a href="#content">නොමිලේ අධ්‍යාපන</a></li>
+                    <li><a href="#contact">සම්බන්ධතා</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය</h1>
+            <p>අපගේ අත්දැකීම් සම්පන්න ගුරුවරුන් සමඟ ඔබේ අධ්‍යාපන සාර්ථකත්වය සහතික කරන්න</p>
+            <a href="#contact" class="cta-button">
+                <i class="fas fa-phone"></i> දැන්ම සම්බන්ධ වන්න
+            </a>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers" class="section">
+        <div class="container">
+            <h2 class="section-title">අපගේ ගුරුවරු</h2>
+            <div class="teachers-slider">
+                <div class="teachers-track">
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-name">සුනිල් ප්‍රේමසිරි</div>
+                        <div class="teacher-subject">ගණිතය</div>
+                        <div class="teacher-experience">15 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="teacher-name">නිමල්කා සිල්වා</div>
+                        <div class="teacher-subject">ඉංග්‍රීසි</div>
+                        <div class="teacher-experience">12 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="teacher-name">රනිල් ජයවර්ධන</div>
+                        <div class="teacher-subject">විද්‍යාව</div>
+                        <div class="teacher-experience">18 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="teacher-name">සාගරිකා රත්නායක</div>
+                        <div class="teacher-subject">සිංහල</div>
+                        <div class="teacher-experience">10 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="teacher-name">අමරසේන ගුණවර්ධන</div>
+                        <div class="teacher-subject">ප්‍රංශ</div>
+                        <div class="teacher-experience">8 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="teacher-name">චන්ද්‍රකුමාර පෙරේරා</div>
+                        <div class="teacher-subject">ගණන්</div>
+                        <div class="teacher-experience">14 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-name">සුනිල් ප්‍රේමසිරි</div>
+                        <div class="teacher-subject">ගණිතය</div>
+                        <div class="teacher-experience">15 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="teacher-name">නිමල්කා සිල්වා</div>
+                        <div class="teacher-subject">ඉංග්‍රීසි</div>
+                        <div class="teacher-experience">12 වර්ෂ පළපුරුදු</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timetable Section -->
+    <section id="timetable" class="section">
+        <div class="container">
+            <h2 class="section-title">පන්ති කාල සටහන</h2>
+            <div class="timetable">
+                <div class="timetable-header">
+                    <i class="fas fa-calendar-alt"></i> සතියේ කාල සටහන
+                </div>
+                <div class="timetable-grid">
+                    <div class="time-slot">
+                        <div class="time-slot-time">8:00 AM - 10:00 AM</div>
+                        <div class="time-slot-subject">ගණිතය</div>
+                        <div class="time-slot-teacher">සුනිල් ප්‍රේමසිරි</div>
+                        <div class="time-slot-grade">10-11 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">10:00 AM - 12:00 PM</div>
+                        <div class="time-slot-subject">ඉංග්‍රීසි</div>
+                        <div class="time-slot-teacher">නිමල්කා සිල්වා</div>
+                        <div class="time-slot-grade">6-9 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">1:00 PM - 3:00 PM</div>
+                        <div class="time-slot-subject">විද්‍යාව</div>
+                        <div class="time-slot-teacher">රනිල් ජයවර්ධන</div>
+                        <div class="time-slot-grade">10-11 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">3:00 PM - 5:00 PM</div>
+                        <div class="time-slot-subject">සිංහල</div>
+                        <div class="time-slot-teacher">සාගරිකා රත්නායක</div>
+                        <div class="time-slot-grade">6-9 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">5:00 PM - 7:00 PM</div>
+                        <div class="time-slot-subject">ගණන්</div>
+                        <div class="time-slot-teacher">චන්ද්‍රකුමාර පෙරේරා</div>
+                        <div class="time-slot-grade">12-13 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">7:00 PM - 9:00 PM</div>
+                        <div class="time-slot-subject">ප්‍රංශ</div>
+                        <div class="time-slot-teacher">අමරසේන ගුණවර්ධන</div>
+                        <div class="time-slot-grade">10-13 ශ්‍රේණි</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="section">
+        <div class="container">
+            <h2 class="section-title">අපගේ පහසුකම්</h2>
+            <div class="facilities-grid">
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="facility-title">වායු සමීකරණ පන්ති කාමර</div>
+                    <div class="facility-description">සිසුන්ගේ පහසුව සඳහා සම්පූර්ණ වායු සමීකරණ පහසුකම් සහිත පන්ති කාමර</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="facility-title">වාහන නැවැත්වීමේ ස්ථානය</div>
+                    <div class="facility-description">ආරක්ෂිත හා විශාල වාහන නැවැත්වීමේ ප්‍රදේශය</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="facility-title">පුස්තකාලය</div>
+                    <div class="facility-description">සිසුන්ගේ අධ්‍යයන කටයුතු සඳහා විශාල පුස්තකාලයක්</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="facility-title">නොමිලේ WiFi</div>
+                    <div class="facility-description">සිසුන්ගේ අධ්‍යයන අවශ්‍යතා සඳහා නොමිලේ අන්තර්ජාල පහසුකම</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="facility-title">පරිගණක පහසුකම්</div>
+                    <div class="facility-description">නවීන පරිගණක සහ ප්‍රොජෙක්ටර් පහසුකම්</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="facility-title">ආපනශාලා</div>
+                    <div class="facility-description">සිසුන් සඳහා ආහාර පාන පහසුකම්</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Educational Content Section -->
+    <section id="content" class="section">
+        <div class="container">
+            <h2 class="section-title">නොමිලේ අධ්‍යාපන අන්තර්ගතය</h2>
+            <div class="content-grid">
+                <a href="#" class="content-button">
+                    <i class="fas fa-calculator"></i>
+                    <div>ගණිතය</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-language"></i>
+                    <div>ඉංග්‍රීසි</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-atom"></i>
+                    <div>විද්‍යාව</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-book"></i>
+                    <div>සිංහල</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-globe-americas"></i>
+                    <div>ප්‍රංශ</div>
+                    <small>10-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-chart-bar"></i>
+                    <div>ගණන්</div>
+                    <small>12-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-history"></i>
+                    <div>ඉතිහාසය</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-map"></i>
+                    <div>භූගෝල විද්‍යාව</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">අප සමඟ සම්බන්ධ වන්න</h2>
+            <div class="card">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3 style="color: #4A90E2; margin-bottom: 1rem;">
+                            <i class="fas fa-phone"></i> සම්බන්ධතා විස්තර
+                        </h3>
+                        <p><i class="fas fa-map-marker-alt" style="color: #4A90E2; margin-right: 10px;"></i> 
+                        123 මෙයින් පාර, කොළඹ 05</p>
+                        <p><i class="fas fa-phone" style="color: #4A90E2; margin-right: 10px;"></i> 
+                        011-2345678</p>
+                        <p><i class="fas fa-mobile-alt" style="color: #4A90E2; margin-right: 10px;"></i> 
+                        077-1234567</p>
+                        <p><i class="fas fa-envelope" style="color: #4A90E2; margin-right: 10px;"></i> 
+                        info@vidura.lk</p>
+                        <p><i class="fas fa-clock" style="color: #4A90E2; margin-right: 10px;"></i> 
+                        සඳුදා - ඉරිදා: 8:00 AM - 9:00 PM</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #4A90E2; margin-bottom: 1rem;">
+                            <i class="fas fa-paper-plane"></i> ක්ෂණික පණිවිඩයක් යවන්න
+                        </h3>
+                        <form style="display: flex; flex-direction: column; gap: 1rem;">
+                            <input type="text" placeholder="ඔබේ නම" style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                            <input type="tel" placeholder="දුරකථන අංකය" style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                            <select style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                                <option>ශ්‍රේණිය තෝරන්න</option>
+                                <option>6 ශ්‍රේණිය</option>
+                                <option>7 ශ්‍රේණිය</option>
+                                <option>8 ශ්‍රේණිය</option>
+                                <option>9 ශ්‍රේණිය</option>
+                                <option>10 ශ්‍රේණිය</option>
+                                <option>11 ශ්‍රේණිය</option>
+                                <option>12 ශ්‍රේණිය</option>
+                                <option>13 ශ්‍රේණිය</option>
+                            </select>
+                            <textarea placeholder="ඔබේ පණිවිඩය" rows="4" style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                            <button type="submit" class="cta-button" style="margin: 0;">
+                                <i class="fas fa-paper-plane"></i> පණිවිඩය යවන්න
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vidura.lk</h3>
+                    <p>ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අපි ඔබේ අධ්‍යාපන ඉලක්ක සාක්ෂාත් කර ගැනීමට උදව් කරමු.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>ඉක්මන් සබැඳි</h3>
+                    <a href="#home">මුල් පිටුව</a>
+                    <a href="#teachers">ගුරුවරු</a>
+                    <a href="#timetable">කාල සටහන</a>
+                    <a href="#facilities">පහසුකම්</a>
+                    <a href="#content">නොමිලේ අධ්‍යාපන</a>
+                </div>
+                <div class="footer-section">
+                    <h3>විෂයන්</h3>
+                    <a href="#">ගණිතය</a>
+                    <a href="#">ඉංග්‍රීසි</a>
+                    <a href="#">විද්‍යාව</a>
+                    <a href="#">සිංහල</a>
+                    <a href="#">ප්‍රංශ</a>
+                    <a href="#">ගණන්</a>
+                </div>
+                <div class="footer-section">
+                    <h3>සම්බන්ධතා</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 මෙයින් පාර, කොළඹ 05</p>
+                    <p><i class="fas fa-phone"></i> 011-2345678</p>
+                    <p><i class="fas fa-envelope"></i> info@vidura.lk</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #555; padding-top: 1rem; margin-top: 2rem;">
+                <p>&copy; 2024 Vidura.lk. සියලුම හිමිකම් ආරක්ෂිතයි.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="fab scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/94771234567" class="fab" style="bottom: 5rem; background: #25D366;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollTopBtn = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add animation to cards when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card, .teacher-card, .facility-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = this.querySelector('input[type="text"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const grade = this.querySelector('select').value;
+            const message = this.querySelector('textarea').value;
+            
+            // Simple validation
+            if (!name || !phone || !grade || !message) {
+                alert('කරුණාකර සියලුම ක්ෂේත්‍ර පුරවන්න');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('ඔබේ පණිවිඩය සාර්ථකව යවන ලදී! අපි ඉක්මණින් ඔබව සම්බන්ධ කර ගනිමු.');
+            this.reset();
+        });
+
+        // Add hover effects to content buttons
+        document.querySelectorAll('.content-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const subject = this.querySelector('div').textContent;
+                alert(`${subject} සඳහා නොමිලේ අධ්‍යාපන අන්තර්ගතය ඉක්මණින් ලබා ගැනීමට අප සමඟ සම්බන්ධ වන්න!`);
+            });
+        });
+
+        // Add click animation to buttons
+        document.querySelectorAll('.cta-button, .content-button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Pause slider animation on hover
+        const slider = document.querySelector('.teachers-track');
+        slider.addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+        });
+        
+        slider.addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Mobile menu toggle (if needed in future)
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Add active class to navigation items based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <style>
+        /* Additional active state for navigation */
+        .nav-menu a.active {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Loading animation */
+        body {
+            transition: opacity 0.5s ease;
+        }
+
+        /* Enhanced mobile responsiveness */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .teacher-card {
+                min-width: 200px;
+                padding: 1.5rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .content-button {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .content-button i {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .header, .fab, .footer {
+                display: none;
+            }
+            
+            .hero {
+                background: white;
+                color: black;
+                padding: 2rem 0;
+            }
+            
+            .section {
+                padding: 2rem 0;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .card {
+                border: 2px solid #333;
+            }
+            
+            .hero {
+                background: #000;
+                color: #fff;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .teachers-track {
+                animation: none;
+            }
+        }
+    </style>
+</body>
+</html>
