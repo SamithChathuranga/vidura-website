@@ -104,6 +104,7 @@ body {
     }
     .mobile-menu-btn {
         display: block;
+        right: 3.5rem; /* Move hamburger icon slightly left in mobile view */
     }
 }
 
@@ -414,7 +415,7 @@ body {
 
 /* Footer */
 .footer {
-    background: #333;
+    background: linear-gradient(45deg, #FF8C42, #FFD700);
     color: white;
     padding: 3rem 0 1rem;
     text-align: center;
@@ -433,7 +434,7 @@ body {
 }
 
 .footer-section p, .footer-section a {
-    color: #ccc;
+    color: #000000;
     text-decoration: none;
     margin-bottom: 0.5rem;
     display: block;
@@ -441,31 +442,6 @@ body {
 
 .footer-section a:hover {
     color: #4A90E2;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.social-links a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #4A90E2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-    background: #7B68EE;
-    transform: translateY(-2px);
 }
 
 /* Animations */
@@ -507,28 +483,95 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .fab {
+        right: 1rem;
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+    .fab.scroll-top {
+        bottom: 1rem;
+    }
+    .fab.whatsapp-fab {
+        bottom: 5.5rem;
+    }
+    .fab i {
+        font-size: 1.5rem;
+    }
+}
+
 /* Floating Action Button */
 .fab {
     position: fixed;
-    bottom: 2rem;
     right: 2rem;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #4A90E2, #7B68EE);
     color: white;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0 8px 25px rgba(74,144,226,0.3);
-    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s cubic-bezier(.4,2,.6,1), background 0.3s;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
 }
 
-.fab:hover {
+.fab.scroll-top {
+    bottom: 2rem;
+    background: linear-gradient(45deg, #4A90E2, #7B68EE) !important;
+}
+
+.fab.whatsapp-fab {
+    bottom: 7.5rem;
+    background: #25D366 !important;
+}
+
+.fab.whatsapp-fab:hover, .fab.whatsapp-fab:focus {
+    background: #1ebe57 !important;
+    box-shadow: 0 12px 35px rgba(37,211,102,0.4);
+}
+
+.fab:hover, .fab:focus {
     transform: scale(1.1);
     box-shadow: 0 12px 35px rgba(74,144,226,0.4);
+    outline: none;
 }
+
+.fab i {
+    font-size: 2rem;
+    margin: 0;
+    pointer-events: none;
+    transition: none;
+}
+
+/* --- WhatsApp FAB: Prevent Icon Animation on Hover --- */
+.fab.whatsapp-fab,
+.fab.whatsapp-fab:hover,
+.fab.whatsapp-fab:focus {
+    /* No transform or scale on hover */
+    transform: none !important;
+}
+.fab.whatsapp-fab i {
+    transition: none !important;
+    transform: none !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fab.whatsapp-fab:hover i,
+.fab.whatsapp-fab:focus i {
+    /* Prevent icon from moving or animating */
+    transition: none !important;
+    transform: none !important;
+    margin: 0 !important;
+}
+/* --- End WhatsApp FAB: Prevent Icon Animation on Hover --- */
 
 /* Scroll to top button */
 .scroll-top {

@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Vidura.lk - ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අත්දැකීම් සම්පන්න ගුරුවරුන්, නවීන පහසුකම්, සහ විශ්වාසදායක අධ්‍යාපන සේවාවන්.">
+    <meta name="keywords" content="Vidura.lk, අධ්‍යාපන, Sri Lanka, Tuition, School, Classes, ගුරුවරු, විද්‍යාව, ගණිතය, ඉංග්‍රීසි, Sinhala, French, Maths, Science, Education">
+    <meta name="author" content="Vidura.lk">
+    <meta property="og:title" content="Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය">
+    <meta property="og:description" content="ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අත්දැකීම් සම්පන්න ගුරුවරුන්, නවීන පහසුකම්, සහ විශ්වාසදායක අධ්‍යාපන සේවාවන්.">
+    <meta property="og:image" content="assets/ViduraLogoFinal.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vidura.lk/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය">
+    <meta name="twitter:description" content="ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අත්දැකීම් සම්පන්න ගුරුවරුන්, නවීන පහසුකම්, සහ විශ්වාසදායක අධ්‍යාපන සේවාවන්.">
+    <meta name="twitter:image" content="assets/ViduraLogoFinal.png">
+    <link rel="canonical" href="https://vidura.lk/">
+    <link rel="icon" type="image/png" href="assets/ViduraLogoFinal.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="nav-container">
             <div class="logo">
-                <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 40px; width: auto; display: inline-block; vertical-align: middle;" />
+                <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 50px; width: auto; display: inline-block; vertical-align: middle;" />
             </div>
-            <button class="mobile-menu-btn" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-menu-btn" aria-label="මෙනුව විවෘත කරන්න" aria-controls="main-navigation" aria-expanded="false" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            <nav>
+            <nav id="main-navigation" aria-label="ප්‍රධාන මෙනුව">
                 <ul class="nav-menu">
                     <li><a href="#home">මුල් පිටුව</a></li>
                     <li><a href="#teachers">ගුරුවරු</a></li>
                     <li><a href="#timetable">කාල සටහන</a></li>
-                    <li><a href="#facilities">පහසුකම්</a></li>
                     <li><a href="#content">නොමිලේ අධ්‍යාපන</a></li>
                     <li><a href="#contact">සම්බන්ධතා</a></li>
                 </ul>
@@ -168,7 +181,7 @@
     </section>
 
     <!-- Facilities Section -->
-    <section id="facilities" class="section">
+    <!-- <section id="facilities" class="section">
         <div class="container">
             <h2 class="section-title">අපගේ පහසුකම්</h2>
             <div class="facilities-grid">
@@ -216,7 +229,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Free Educational Content Section -->
     <section id="content" class="section">
@@ -278,25 +291,24 @@
                             <i class="fas fa-phone"></i> සම්බන්ධතා විස්තර
                         </h3>
                         <p><i class="fas fa-map-marker-alt" style="color: #4A90E2; margin-right: 10px;"></i> 
-                        123 මෙයින් පාර, කොළඹ 05</p>
+                        48/C, හයිලෙවල් පාර , කලුඅග්ගල , හංවැල්ල</p>
                         <p><i class="fas fa-phone" style="color: #4A90E2; margin-right: 10px;"></i> 
-                        011-2345678</p>
-                        <p><i class="fas fa-mobile-alt" style="color: #4A90E2; margin-right: 10px;"></i> 
-                        077-1234567</p>
+                        0785 861 696</p>
                         <p><i class="fas fa-envelope" style="color: #4A90E2; margin-right: 10px;"></i> 
                         info@vidura.lk</p>
-                        <p><i class="fas fa-clock" style="color: #4A90E2; margin-right: 10px;"></i> 
-                        සඳුදා - ඉරිදා: 8:00 AM - 9:00 PM</p>
                     </div>
                     <div>
                         <h3 style="color: #4A90E2; margin-bottom: 1rem;">
                             <i class="fas fa-paper-plane"></i> ක්ෂණික පණිවිඩයක් යවන්න
                         </h3>
-                        <form style="display: flex; flex-direction: column; gap: 1rem;">
-                            <input type="text" placeholder="ඔබේ නම" style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
-                            <input type="tel" placeholder="දුරකථන අංකය" style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
-                            <select style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
-                                <option>ශ්‍රේණිය තෝරන්න</option>
+                        <form style="display: flex; flex-direction: column; gap: 1rem;" aria-label="සම්බන්ධතා පෝරමය">
+                            <label for="name">ඔබේ නම</label>
+                            <input id="name" name="name" type="text" placeholder="ඔබේ නම" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                            <label for="phone">දුරකථන අංකය</label>
+                            <input id="phone" name="phone" type="tel" placeholder="දුරකථන අංකය" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                            <label for="grade">ශ්‍රේණිය තෝරන්න</label>
+                            <select id="grade" name="grade" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                                <option value="">ශ්‍රේණිය තෝරන්න</option>
                                 <option>6 ශ්‍රේණිය</option>
                                 <option>7 ශ්‍රේණිය</option>
                                 <option>8 ශ්‍රේණිය</option>
@@ -306,9 +318,10 @@
                                 <option>12 ශ්‍රේණිය</option>
                                 <option>13 ශ්‍රේණිය</option>
                             </select>
-                            <textarea placeholder="ඔබේ පණිවිඩය" rows="4" style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                            <label for="message">ඔබේ පණිවිඩය</label>
+                            <textarea id="message" name="message" placeholder="ඔබේ පණිවිඩය" rows="4" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
                             <button type="submit" class="cta-button" style="margin: 0;">
-                                <i class="fas fa-paper-plane"></i> පණිවිඩය යවන්න
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> පණිවිඩය යවන්න
                             </button>
                         </form>
                     </div>
@@ -318,18 +331,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo" aria-label="පාදකය">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 80px; width: auto; display: block; margin: 0 auto 1rem;" />
                     <p>ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අපි ඔබේ අධ්‍යාපන ඉලක්ක සාක්ෂාත් කර ගැනීමට උදව් කරමු.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
                 </div>
                 <div class="footer-section">
                     <h3>ඉක්මන් සබැඳි</h3>
@@ -350,13 +357,13 @@
                 </div>
                 <div class="footer-section">
                     <h3>සම්බන්ධතා</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 මෙයින් පාර, කොළඹ 05</p>
-                    <p><i class="fas fa-phone"></i> 011-2345678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 48/C, හයිලෙවල් පාර , කලුඅග්ගල , හංවැල්ල </p>
+                    <p><i class="fas fa-phone"></i> 0785 861 696</p>
                     <p><i class="fas fa-envelope"></i> info@vidura.lk</p>
                 </div>
             </div>
             <div style="border-top: 1px solid #555; padding-top: 1rem; margin-top: 2rem;">
-                <p>&copy; 2024 Vidura.lk. සියලුම හිමිකම් ආරක්ෂිතයි.</p>
+                <p>&copy; 2025 Vidura.lk. සියලුම හිමිකම් ආරක්ෂිතයි.</p>
             </div>
         </div>
     </footer>
@@ -367,7 +374,7 @@
     </button>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/94771234567" class="fab" style="bottom: 5rem; background: #25D366;">
+    <a href="https://wa.me/94785861696" class="fab whatsapp-fab" aria-label="WhatsApp Call">
         <i class="fab fa-whatsapp"></i>
     </a>
 
