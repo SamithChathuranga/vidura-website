@@ -12,9 +12,11 @@
     <header class="header">
         <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-graduation-cap"></i>
-                Vidura.lk
+                <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 40px; width: auto; display: inline-block; vertical-align: middle;" />
             </div>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#home">මුල් පිටුව</a></li>
@@ -320,7 +322,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Vidura.lk</h3>
+                    <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 80px; width: auto; display: block; margin: 0 auto 1rem;" />
                     <p>ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අපි ඔබේ අධ්‍යාපන ඉලක්ක සාක්ෂාත් කර ගැනීමට උදව් කරමු.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -370,5 +372,18 @@
     </a>
 
     <script src="main.js"></script>
+    <script>
+    // Mobile menu toggle for mobile nav
+    function toggleMobileMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('active');
+    }
+    // Optional: Close menu when clicking a link (for better UX)
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.remove('active');
+        });
+    });
+    </script>
 </body>
 </html>
