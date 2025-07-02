@@ -1,396 +1,1178 @@
 <!DOCTYPE html>
-<html lang="si">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය</title>
-    <meta name="description" content="Vidura.lk - ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අත්දැකීම් සම්පන්න ගුරුවරුන්, නවීන පහසුකම්, සහ විශ්වාසදායක අධ්‍යාපන සේවාවන්.">
-    <meta name="keywords" content="Vidura.lk, අධ්‍යාපන, Sri Lanka, Tuition, School, Classes, ගුරුවරු, විද්‍යාව, ගණිතය, ඉංග්‍රීසි, Sinhala, French, Maths, Science, Education">
-    <meta name="author" content="Vidura.lk">
-    <meta property="og:title" content="Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය">
-    <meta property="og:description" content="ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අත්දැකීම් සම්පන්න ගුරුවරුන්, නවීන පහසුකම්, සහ විශ්වාසදායක අධ්‍යාපන සේවාවන්.">
-    <meta property="og:image" content="assets/ViduraLogoFinal.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vidura.lk/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය">
-    <meta name="twitter:description" content="ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අත්දැකීම් සම්පන්න ගුරුවරුන්, නවීන පහසුකම්, සහ විශ්වාසදායක අධ්‍යාපන සේවාවන්.">
-    <meta name="twitter:image" content="assets/ViduraLogoFinal.png">
-    <link rel="canonical" href="https://vidura.lk/">
-    <link rel="icon" type="image/png" href="assets/ViduraFBProfile.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Vidura.lk - Coming Soon</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: linear-gradient(-45deg, #4A90E2, #7B68EE, #9B59B6, #3498DB);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            position: relative;
+        }
+
+        /* Animated background */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) { width: 20px; height: 20px; left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 15px; height: 15px; left: 20%; animation-delay: 1s; }
+        .particle:nth-child(3) { width: 25px; height: 25px; left: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { width: 18px; height: 18px; left: 40%; animation-delay: 3s; }
+        .particle:nth-child(5) { width: 22px; height: 22px; left: 50%; animation-delay: 4s; }
+        .particle:nth-child(6) { width: 16px; height: 16px; left: 60%; animation-delay: 5s; }
+        .particle:nth-child(7) { width: 30px; height: 30px; left: 70%; animation-delay: 0.5s; }
+        .particle:nth-child(8) { width: 12px; height: 12px; left: 80%; animation-delay: 1.5s; }
+        .particle:nth-child(9) { width: 28px; height: 28px; left: 90%; animation-delay: 2.5s; }
+        .particle:nth-child(10) { width: 14px; height: 14px; left: 95%; animation-delay: 3.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Main container */
+        .main-content {
+            position: relative;
+            z-index: 10;
+            padding: 2rem 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        /* Logo */
+        .logo {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeInDown 1s ease;
+            filter: drop-shadow(0 4px 15px rgba(0,0,0,0.3));
+        }
+
+        .logo img {
+            max-width: 300px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Coming Soon Text */
+        .coming-soon {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #FFD700, #FF8C42, #FFD700);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite, fadeInUp 1s ease 0.5s both;
+            text-shadow: 0 4px 15px rgba(255, 212, 0, 0.2);
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        /* Description */
+        .description {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease 1s both;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Call to action container */
+        .cta-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 2rem;
+            margin: 2rem 0;
+            animation: fadeInUp 1s ease 1.5s both;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: #FFD700;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Infinite scrolling phone number */
+        .phone-scroll {
+            background: linear-gradient(45deg, #FF8C42, #FFD700);
+            border-radius: 15px;
+            padding: 1rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(255, 140, 66, 0.3);
+            cursor: pointer;
+        }
+
+        .phone-track {
+            display: flex;
+            animation: infiniteScroll 8s linear infinite;
+            white-space: nowrap;
+        }
+
+        .phone-item {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .phone-item i {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes infiniteScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Contact Info Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            animation: fadeInUp 1s ease 2s both;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #FFD700;
+            display: block;
+        }
+
+        .contact-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #FFD700;
+        }
+
+        .contact-card p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        /* Image Slider */
+        .facilities-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 3rem 0;
+            animation: fadeInUp 1s ease 2.5s both;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #FFD700;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .slider-container {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: end;
+            padding: 2rem;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .slide-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-description {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 3;
+        }
+
+        .slider-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-nav.prev {
+            left: 1rem;
+        }
+
+        .slider-nav.next {
+            right: 1rem;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #FFD700;
+            transform: scale(1.2);
+        }
+
+        /* Social Media Buttons */
+        .social-buttons {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .social-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            animation: bounce 2s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn:hover {
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+        }
+
+        .facebook-btn {
+            background: #1877F2;
+            box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
+            animation-delay: 0.5s;
+        }
+
+        .facebook-btn:hover {
+            box-shadow: 0 12px 35px rgba(24, 119, 242, 0.6);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Countdown timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            animation: fadeInUp 1s ease 3s both;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1rem;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FFD700;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Loading animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #4A90E2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .logo img {
+                max-width: 250px;
+                max-height: 100px;
+            }
+
+            .coming-soon {
+                font-size: 2.5rem;
+            }
+
+            .description {
+                font-size: 1.1rem;
+            }
+
+            .phone-item {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .countdown {
+                gap: 1rem;
+            }
+
+            .countdown-item {
+                min-width: 60px;
+                padding: 0.8rem;
+            }
+
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .slide {
+                height: 300px;
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .social-buttons {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .social-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                max-width: 200px;
+                max-height: 80px;
+            }
+
+            .coming-soon {
+                font-size: 2rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .phone-item {
+                font-size: 1.2rem;
+            }
+
+            .cta-container {
+                padding: 1.5rem;
+            }
+
+            .countdown {
+                gap: 0.5rem;
+            }
+
+            .countdown-item {
+                min-width: 50px;
+                padding: 0.5rem;
+            }
+
+            .countdown-number {
+                font-size: 1.2rem;
+            }
+
+            .slide {
+                height: 250px;
+                padding: 1rem;
+            }
+
+            .slide-title {
+                font-size: 1.2rem;
+            }
+
+            .slide-description {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            .container {
+                background: rgba(0, 0, 0, 0.8);
+                border-radius: 20px;
+                padding: 3rem;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .phone-track {
+                animation: none;
+            }
+            
+            .particle {
+                animation: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" role="banner">
-        <div class="nav-container">
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <!-- Logo -->
             <div class="logo">
-                <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 50px; width: auto; display: inline-block; vertical-align: middle;" />
+                <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 500px; width: auto; display: inline-block; vertical-align: middle;" />
             </div>
-            <button class="mobile-menu-btn" aria-label="මෙනුව විවෘත කරන්න" aria-controls="main-navigation" aria-expanded="false" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars" aria-hidden="true"></i>
-            </button>
-            <nav id="main-navigation" aria-label="ප්‍රධාන මෙනුව">
-                <ul class="nav-menu">
-                    <li><a href="#home">මුල් පිටුව</a></li>
-                    <li><a href="#teachers">ගුරුවරු</a></li>
-                    <li><a href="#timetable">කාල සටහන</a></li>
-                    <li><a href="#content">අත්වැල</a></li>
-                    <li><a href="#contact">සම්බන්ධතා</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය</h1>
-            <p>අපගේ අත්දැකීම් සම්පන්න ගුරුවරුන් සමඟ ඔබේ අධ්‍යාපන සාර්ථකත්වය සහතික කරන්න</p>
-            <a href="#contact" class="cta-button">
-                <i class="fas fa-phone"></i> දැන්ම සම්බන්ධ වන්න
-            </a>
-        </div>
-    </section>
+            <!-- Coming Soon Text -->
+            <div class="coming-soon">
+                Coming Soon 
+            </div>
 
-    <!-- Teachers Section -->
-    <section id="teachers" class="section">
-        <div class="container">
-            <h2 class="section-title">අපගේ ගුරුවරු</h2>
-            <div class="teachers-slider">
-                <div class="teachers-track">
-                    <div class="teacher-card">
-                        <div class="teacher-avatar">
-                            <i class="fas fa-user-tie"></i>
+            <!-- Description -->
+            <div class="description">
+                ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය<br>
+                නව අත්දැකීම් සමග ඔබව පිළිගන්නට සූදානම්
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-container">
+                <div class="cta-text">
+                    ගුරුවරුන්ගේ පංති කාල වෙන්කිරීම් සඳහා දැන්ම අමතන්න
+                </div>
+                
+                <div class="phone-scroll" tabindex="0">
+                    <div class="phone-track">
+                        <div class="phone-item">
+                            <i class="home"></i>
+                            <span>ඉඩ කඩ සීමිතයි </span>
                         </div>
-                        <div class="teacher-name">සුනිල් ප්‍රේමසිරි</div>
-                        <div class="teacher-subject">ගණිතය</div>
-                        <div class="teacher-experience">15 වර්ෂ පළපුරුදු</div>
-                    </div>
-                    <div class="teacher-card">
-                        <div class="teacher-avatar">
-                            <i class="fas fa-user-graduate"></i>
+                        <div class="phone-item">
+                            <i class="fas fa-phone"></i>
+                            <span>දැන්ම අමතන්න 078-586-1696</span>
                         </div>
-                        <div class="teacher-name">නිමල්කා සිල්වා</div>
-                        <div class="teacher-subject">ඉංග්‍රීසි</div>
-                        <div class="teacher-experience">12 වර්ෂ පළපුරුදු</div>
-                    </div>
-                    <div class="teacher-card">
-                        <div class="teacher-avatar">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <div class="teacher-name">රනිල් ජයවර්ධන</div>
-                        <div class="teacher-subject">විද්‍යාව</div>
-                        <div class="teacher-experience">18 වර්ෂ පළපුරුදු</div>
-                    </div>
-                    <div class="teacher-card">
-                        <div class="teacher-avatar">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="teacher-name">සාගරිකා රත්නායක</div>
-                        <div class="teacher-subject">සිංහල</div>
-                        <div class="teacher-experience">10 වර්ෂ පළපුරුදු</div>
-                    </div>
-                    <div class="teacher-card">
-                        <div class="teacher-avatar">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="teacher-name">අමරසේන ගුණවර්ධන</div>
-                        <div class="teacher-subject">ප්‍රංශ</div>
-                        <div class="teacher-experience">8 වර්ෂ පළපුරුදු</div>
-                    </div>
-                    <div class="teacher-card">
-                        <div class="teacher-avatar">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="teacher-name">චන්ද්‍රකුමාර පෙරේරා</div>
-                        <div class="teacher-subject">ගණන්</div>
-                        <div class="teacher-experience">14 වර්ෂ පළපුරුදු</div>
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="teacher-card">
-                        <div class="teacher-avatar">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="teacher-name">සුනිල් ප්‍රේමසිරි</div>
-                        <div class="teacher-subject">ගණිතය</div>
-                        <div class="teacher-experience">15 වර්ෂ පළපුරුදු</div>
-                    </div>
-                    <div class="teacher-card">
-                        <div class="teacher-avatar">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <div class="teacher-name">නිමල්කා සිල්වා</div>
-                        <div class="teacher-subject">ඉංග්‍රීසි</div>
-                        <div class="teacher-experience">12 වර්ෂ පළපුරුදු</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Timetable Section -->
-    <section id="timetable" class="section">
-        <div class="container">
-            <h2 class="section-title">පන්ති කාල සටහන</h2>
-            <div class="timetable">
-                <div class="timetable-header">
-                    <i class="fas fa-calendar-alt"></i> සතියේ කාල සටහන
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="contact-card" onclick="window.open('mailto:info@vidura.lk')">
+                    <i class="fas fa-envelope"></i>
+                    <h3>ඊමේල්</h3>
+                    <p>info@vidura.lk<br>විමසීම් සඳහා අප වෙත ලියන්න</p>
                 </div>
-                <div class="timetable-grid">
-                    <div class="time-slot">
-                        <div class="time-slot-time">8:00 AM - 10:00 AM</div>
-                        <div class="time-slot-subject">ගණිතය</div>
-                        <div class="time-slot-teacher">සුනිල් ප්‍රේමසිරි</div>
-                        <div class="time-slot-grade">10-11 ශ්‍රේණි</div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time-slot-time">10:00 AM - 12:00 PM</div>
-                        <div class="time-slot-subject">ඉංග්‍රීසි</div>
-                        <div class="time-slot-teacher">නිමල්කා සිල්වා</div>
-                        <div class="time-slot-grade">6-9 ශ්‍රේණි</div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time-slot-time">1:00 PM - 3:00 PM</div>
-                        <div class="time-slot-subject">විද්‍යාව</div>
-                        <div class="time-slot-teacher">රනිල් ජයවර්ධන</div>
-                        <div class="time-slot-grade">10-11 ශ්‍රේණි</div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time-slot-time">3:00 PM - 5:00 PM</div>
-                        <div class="time-slot-subject">සිංහල</div>
-                        <div class="time-slot-teacher">සාගරිකා රත්නායක</div>
-                        <div class="time-slot-grade">6-9 ශ්‍රේණි</div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time-slot-time">5:00 PM - 7:00 PM</div>
-                        <div class="time-slot-subject">ගණන්</div>
-                        <div class="time-slot-teacher">චන්ද්‍රකුමාර පෙරේරා</div>
-                        <div class="time-slot-grade">12-13 ශ්‍රේණි</div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time-slot-time">7:00 PM - 9:00 PM</div>
-                        <div class="time-slot-subject">ප්‍රංශ</div>
-                        <div class="time-slot-teacher">අමරසේන ගුණවර්ධන</div>
-                        <div class="time-slot-grade">10-13 ශ්‍රේණි</div>
-                    </div>
+                <div class="contact-card" onclick="window.open('https://maps.app.goo.gl/hivjV34Ydc3Ye3JG6')">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>ස්ථානය</h3>
+                    <p>කලුඅග්ගල ශාන්ත ජෝන් බොස්කෝ මහා විදුහල අසල <br>Click here for Google Map </p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Facilities Section -->
-    <!-- <section id="facilities" class="section">
-        <div class="container">
-            <h2 class="section-title">අපගේ පහසුකම්</h2>
-            <div class="facilities-grid">
-                <div class="card facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-snowflake"></i>
-                    </div>
-                    <div class="facility-title">වායු සමීකරණ පන්ති කාමර</div>
-                    <div class="facility-description">සිසුන්ගේ පහසුව සඳහා සම්පූර්ණ වායු සමීකරණ පහසුකම් සහිත පන්ති කාමර</div>
-                </div>
-                <div class="card facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <div class="facility-title">වාහන නැවැත්වීමේ ස්ථානය</div>
-                    <div class="facility-description">ආරක්ෂිත හා විශාල වාහන නැවැත්වීමේ ප්‍රදේශය</div>
-                </div>
-                <div class="card facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <div class="facility-title">පුස්තකාලය</div>
-                    <div class="facility-description">සිසුන්ගේ අධ්‍යයන කටයුතු සඳහා විශාල පුස්තකාලයක්</div>
-                </div>
-                <div class="card facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <div class="facility-title">නොමිලේ WiFi</div>
-                    <div class="facility-description">සිසුන්ගේ අධ්‍යයන අවශ්‍යතා සඳහා නොමිලේ අන්තර්ජාල පහසුකම</div>
-                </div>
-                <div class="card facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <div class="facility-title">පරිගණක පහසුකම්</div>
-                    <div class="facility-description">නවීන පරිගණක සහ ප්‍රොජෙක්ටර් පහසුකම්</div>
-                </div>
-                <div class="card facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-coffee"></i>
-                    </div>
-                    <div class="facility-title">ආපනශාලා</div>
-                    <div class="facility-description">සිසුන් සඳහා ආහාර පාන පහසුකම්</div>
-                </div>
+            <div class="cta-text">
+                *වායු සමනය කරන ලද උපරිම සිසුන් 35 ක් වූ කුඩා කණ්ඩායම් පංති සදහා පමණි 
             </div>
-        </div>
-    </section> -->
-
-    <!-- Free Educational Content Section -->
-    <section id="content" class="section">
-        <div class="container">
-            <h2 class="section-title">අධ්‍යාපන අත්වැල</h2>
-            <div class="content-grid">
-                <a href="#" class="content-button">
-                    <i class="fas fa-calculator"></i>
-                    <div>ගණිතය</div>
-                    <small>6-13 ශ්‍රේණි</small>
-                </a>
-                <a href="#" class="content-button">
-                    <i class="fas fa-language"></i>
-                    <div>ඉංග්‍රීසි</div>
-                    <small>6-13 ශ්‍රේණි</small>
-                </a>
-                <a href="#" class="content-button">
-                    <i class="fas fa-atom"></i>
-                    <div>විද්‍යාව</div>
-                    <small>6-13 ශ්‍රේණි</small>
-                </a>
-                <a href="#" class="content-button">
-                    <i class="fas fa-book"></i>
-                    <div>සිංහල</div>
-                    <small>6-13 ශ්‍රේණි</small>
-                </a>
-                <a href="#" class="content-button">
-                    <i class="fas fa-globe-americas"></i>
-                    <div>ප්‍රංශ</div>
-                    <small>10-13 ශ්‍රේණි</small>
-                </a>
-                <a href="#" class="content-button">
-                    <i class="fas fa-chart-bar"></i>
-                    <div>ගණන්</div>
-                    <small>12-13 ශ්‍රේණි</small>
-                </a>
-                <a href="#" class="content-button">
-                    <i class="fas fa-history"></i>
-                    <div>ඉතිහාසය</div>
-                    <small>6-13 ශ්‍රේණි</small>
-                </a>
-                <a href="#" class="content-button">
-                    <i class="fas fa-map"></i>
-                    <div>භූගෝල විද්‍යාව</div>
-                    <small>6-13 ශ්‍රේණි</small>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">අප සමඟ සම්බන්ධ වන්න</h2>
-            <div class="card">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div>
-                        <h3 style="color: #4A90E2; margin-bottom: 1rem;">
-                            <i class="fas fa-phone"></i> සම්බන්ධතා විස්තර
-                        </h3>
-                        <p><i class="fas fa-map-marker-alt" style="color: #4A90E2; margin-right: 10px;"></i> 
-                        48/C, හයිලෙවල් පාර , කලුඅග්ගල , හංවැල්ල</p>
-                        <p><i class="fas fa-phone" style="color: #4A90E2; margin-right: 10px;"></i> 
-                        0785 861 696</p>
-                        <p><i class="fas fa-envelope" style="color: #4A90E2; margin-right: 10px;"></i> 
-                        info@vidura.lk</p>
+            <!-- Facilities Slider -->
+            <!-- <div class="facilities-section">
+                <h2 class="section-title">අපගේ පහසුකම්</h2>
+                <div class="slider-container">
+                    <div class="slider" id="slider">
+                        <div class="slide" style="background-image: linear-gradient(45deg, #667eea 0%, #764ba2 100%);">
+                            <div class="slide-overlay"></div>
+                            <div class="slide-content">
+                                <h3 class="slide-title">නවීන පන්ති කාමර</h3>
+                                <p class="slide-description">නවීන තාක්ෂණය සහිත, සුවපහසු ඉගෙනුම් පරිසරයක්</p>
+                            </div>
+                        </div>
+                        <div class="slide" style="background-image: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);">
+                            <div class="slide-overlay"></div>
+                            <div class="slide-content">
+                                <h3 class="slide-title">පරිගණක විද්‍යාගාරය</h3>
+                                <p class="slide-description">උසස් තත්ත්වයේ පරිගණක සහ අන්තර්ජාල පහසුකම්</p>
+                            </div>
+                        </div>
+                        <div class="slide" style="background-image: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);">
+                            <div class="slide-overlay"></div>
+                            <div class="slide-content">
+                                <h3 class="slide-title">පුස්තකාලය</h3>
+                                <p class="slide-description">විශාල පුස්තක සම්පතක් සහ අධ්‍යයන කාමර</p>
+                            </div>
+                        </div>
+                        <div class="slide" style="background-image: linear-gradient(45deg, #43e97b 0%, #38f9d7 100%);">
+                            <div class="slide-overlay"></div>
+                            <div class="slide-content">
+                                <h3 class="slide-title">විද්‍යාගාර පහසුකම්</h3>
+                                <p class="slide-description">භෞතික විද්‍යා, රසායන විද්‍යා සහ ජීව විද්‍යා විද්‍යාගාර</p>
+                            </div>
+                        </div>
+                        <div class="slide" style="background-image: linear-gradient(45deg, #fa709a 0%, #fee140 100%);">
+                            <div class="slide-overlay"></div>
+                            <div class="slide-content">
+                                <h3 class="slide-title">ක්‍රීඩා පහසුකම්</h3>
+                                <p class="slide-description">ක්‍රීඩාංගණය සහ ගෘහස්ථ ක්‍රීඩා පහසුකම්</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3 style="color: #4A90E2; margin-bottom: 1rem;">
-                            <i class="fas fa-paper-plane"></i> ක්ෂණික පණිවිඩයක් යවන්න
-                        </h3>
-                        <form style="display: flex; flex-direction: column; gap: 1rem;" aria-label="සම්බන්ධතා පෝරමය">
-                            <label for="name">ඔබේ නම</label>
-                            <input id="name" name="name" type="text" placeholder="ඔබේ නම" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
-                            <label for="phone">දුරකථන අංකය</label>
-                            <input id="phone" name="phone" type="tel" placeholder="දුරකථන අංකය" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
-                            <label for="grade">ශ්‍රේණිය තෝරන්න</label>
-                            <select id="grade" name="grade" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
-                                <option value="">ශ්‍රේණිය තෝරන්න</option>
-                                <option>6 ශ්‍රේණිය</option>
-                                <option>7 ශ්‍රේණිය</option>
-                                <option>8 ශ්‍රේණිය</option>
-                                <option>9 ශ්‍රේණිය</option>
-                                <option>10 ශ්‍රේණිය</option>
-                                <option>11 ශ්‍රේණිය</option>
-                                <option>12 ශ්‍රේණිය</option>
-                                <option>13 ශ්‍රේණිය</option>
-                            </select>
-                            <label for="message">ඔබේ පණිවිඩය</label>
-                            <textarea id="message" name="message" placeholder="ඔබේ පණිවිඩය" rows="4" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
-                            <button type="submit" class="cta-button" style="margin: 0;">
-                                <i class="fas fa-paper-plane" aria-hidden="true"></i> පණිවිඩය යවන්න
-                            </button>
-                        </form>
-                    </div>
+                    <button class="slider-nav prev" onclick="prevSlide()">❮</button>
+                    <button class="slider-nav next" onclick="nextSlide()">❯</button>
                 </div>
-            </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div> -->
+
+            <!-- Countdown Timer
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <div class="countdown-label">දින</div>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <div class="countdown-label">පැය</div>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <div class="countdown-label">මිනිත්තු</div>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <div class="countdown-label">තත්පර</div>
+                </div>
+            </div> -->
         </div>
-    </section>
+    </div>
+    <!-- Social Media Buttons -->
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/www.vidura.lk/" target="_blank" class="social-btn facebook-btn" title="Facebook හරහා සම්බන්ධ වන්න">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://wa.me/94785861696?text=ආයුබෝවන්! Vidura.lk ගුරුවරුන්ගේ පංති කාල වෙන්කිරීම් සඳහා විමසීමක් කරන්න කැමතියි." class="social-btn whatsapp-btn" title="WhatsApp හරහා සම්බන්ධ වන්න">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo" aria-label="පාදකය">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 80px; width: auto; display: block; margin: 0 auto 1rem;" />
-                    <p>ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අපි ඔබේ අධ්‍යාපන ඉලක්ක සාක්ෂාත් කර ගැනීමට උදව් කරමු.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>ඉක්මන් සබැඳි</h3>
-                    <a href="#home">මුල් පිටුව</a>
-                    <a href="#teachers">ගුරුවරු</a>
-                    <a href="#timetable">කාල සටහන</a>
-                    <a href="#facilities">පහසුකම්</a>
-                    <a href="#content">නොමිලේ අධ්‍යාපන</a>
-                </div>
-                <div class="footer-section">
-                    <h3>විෂයන්</h3>
-                    <a href="#">ගණිතය</a>
-                    <a href="#">ඉංග්‍රීසි</a>
-                    <a href="#">විද්‍යාව</a>
-                    <a href="#">සිංහල</a>
-                    <a href="#">ප්‍රංශ</a>
-                    <a href="#">ගණන්</a>
-                </div>
-                <div class="footer-section">
-                    <h3>සම්බන්ධතා</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 48/C, හයිලෙවල් පාර , කලුඅග්ගල , හංවැල්ල </p>
-                    <p><i class="fas fa-phone"></i> 0785 861 696</p>
-                    <p><i class="fas fa-envelope"></i> info@vidura.lk</p>
-                </div>
-            </div>
-            <div style="border-top: 1px solid #555; padding-top: 1rem; margin-top: 2rem;">
-                <p>&copy; 2025 Vidura.lk. සියලුම හිමිකම් ආරක්ෂිතයි.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating Action Button -->
-    <button class="fab scroll-top" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/94785861696" class="fab whatsapp-fab" aria-label="WhatsApp Call">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script src="main.js"></script>
     <script>
-    // Mobile menu toggle for mobile nav
-    function toggleMobileMenu() {
-        const navMenu = document.querySelector('.nav-menu');
-        navMenu.classList.toggle('active');
-    }
-    // Optional: Close menu when clicking a link (for better UX)
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.querySelector('.nav-menu').classList.remove('active');
+        // Loading screen
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hide');
+            }, 1000);
         });
-    });
+
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        // Create dots
+        const dotsContainer = document.getElementById('sliderDots');
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateSlider() {
+            const slider = document.getElementById('slider');
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        // Auto-advance slides
+        setInterval(nextSlide, 5000);
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        const sliderContainer = document.querySelector('.slider-container');
+
+        sliderContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        sliderContainer.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const threshold = 50;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
+
+        // Countdown timer (set launch date - example: 30 days from now)
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 30); // 30 days from now
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = launchDate.getTime() - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<div class="countdown-item"><span class="countdown-number">🎉</span><div class="countdown-label">දියත් කරන ලදී!</div></div>';
+            }
+        }
+
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Add click event to phone number for mobile devices
+        document.querySelector('.phone-scroll').addEventListener('click', function() {
+            window.location.href = 'tel:+94712345678';
+        });
+
+        // Keyboard accessibility
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                if (e.target.classList.contains('phone-scroll')) {
+                    window.location.href = 'tel:+94712345678';
+                }
+            }
+            
+            // Slider keyboard navigation
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+
+        // Analytics tracking (add your analytics code here)
+        function trackEvent(event, data) {
+            // Add your analytics tracking code here
+            console.log('Event:', event, 'Data:', data);
+        }
+
+        // Track interactions
+        document.querySelector('.phone-scroll').addEventListener('click', function() {
+            trackEvent('phone_click', { number: '071-234-56789' });
+        });
+
+        document.querySelector('.whatsapp-btn').addEventListener('click', function() {
+            trackEvent('whatsapp_click', { platform: 'web' });
+        });
+
+        document.querySelector('.facebook-btn').addEventListener('click', function() {
+            trackEvent('facebook_click', { platform: 'web' });
+        });
+
+        document.querySelector('.contact-card').addEventListener('click', function() {
+            trackEvent('email_click', { email: 'info@vidura.lk' });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe animated elements
+        document.querySelectorAll('.contact-info, .facilities-section, .countdown').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Easter egg - Konami code
+        let konamiCode = [];
+        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
+        document.addEventListener('keydown', function(e) {
+            konamiCode.push(e.keyCode);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+            
+            if (konamiCode.toString() === konamiSequence.toString()) {
+                document.body.style.animation = 'rainbow 2s ease infinite';
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                }, 5000);
+            }
+        });
+
+        // Rainbow animation for easter egg
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes rainbow {
+                0% { filter: hue-rotate(0deg); }
+                100% { filter: hue-rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Performance optimization - pause animations when tab is not visible
+        document.addEventListener('visibilitychange', function() {
+            const elements = document.querySelectorAll('.particle, .phone-track, .slider');
+            if (document.hidden) {
+                elements.forEach(el => {
+                    el.style.animationPlayState = 'paused';
+                });
+            } else {
+                elements.forEach(el => {
+                    el.style.animationPlayState = 'running';
+                });
+            }
+        });
+
+        // Lazy loading for better performance
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Preload critical resources
+        function preloadResource(href, as) {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.href = href;
+            link.as = as;
+            document.head.appendChild(link);
+        }
+
+        // Preload fonts
+        preloadResource('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100;200;300;400;500;600;700;800;900&display=swap', 'style');
+
+        // Service Worker for offline support (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Add smooth scrolling behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Handle window resize for responsive slider
+        window.addEventListener('resize', () => {
+            updateSlider();
+        });
+
+        // Add focus management for accessibility
+        const focusableElements = document.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+        
+        // Trap focus within modal-like elements when needed
+        function trapFocus(element) {
+            const focusableEls = element.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+            const firstFocusableEl = focusableEls[0];
+            const lastFocusableEl = focusableEls[focusableEls.length - 1];
+
+            element.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstFocusableEl) {
+                            lastFocusableEl.focus();
+                            e.preventDefault();
+                        }
+                    } else {
+                        if (document.activeElement === lastFocusableEl) {
+                            firstFocusableEl.focus();
+                            e.preventDefault();
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize accessibility features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add aria labels for better screen reader support
+            document.querySelector('.slider-nav.prev').setAttribute('aria-label', 'Previous slide');
+            document.querySelector('.slider-nav.next').setAttribute('aria-label', 'Next slide');
+            
+            // Add role attributes
+            document.querySelector('.slider-container').setAttribute('role', 'region');
+            document.querySelector('.slider-container').setAttribute('aria-label', 'Facilities slideshow');
+            
+            // Make slider dots keyboard accessible
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.setAttribute('tabindex', '0');
+                dot.setAttribute('role', 'button');
+                dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                
+                dot.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        goToSlide(index);
+                    }
+                });
+            });
+        });
+
+        // Add error handling for external resources
+        window.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                // Fallback for broken images
+                e.target.style.display = 'none';
+            }
+        });
+
+        // Initialize tooltips for better UX
+        function initTooltips() {
+            const elementsWithTooltips = document.querySelectorAll('[title]');
+            elementsWithTooltips.forEach(element => {
+                element.addEventListener('mouseenter', showTooltip);
+                element.addEventListener('mouseleave', hideTooltip);
+            });
+        }
+
+        function showTooltip(e) {
+            // Simple tooltip implementation
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            tooltip.textContent = e.target.getAttribute('title');
+            tooltip.style.cssText = `
+                position: absolute;
+                background: rgba(0,0,0,0.8);
+                color: white;
+                padding: 0.5rem;
+                border-radius: 0.25rem;
+                font-size: 0.875rem;
+                z-index: 10000;
+                pointer-events: none;
+                white-space: nowrap;
+            `;
+            document.body.appendChild(tooltip);
+            
+            const rect = e.target.getBoundingClientRect();
+            tooltip.style.top = rect.top - tooltip.offsetHeight - 5 + 'px';
+            tooltip.style.left = rect.left + (rect.width - tooltip.offsetWidth) / 2 + 'px';
+            
+            // Remove title to prevent default tooltip
+            e.target.setAttribute('data-title', e.target.getAttribute('title'));
+            e.target.removeAttribute('title');
+        }
+
+        function hideTooltip(e) {
+            const tooltip = document.querySelector('.tooltip');
+            if (tooltip) {
+                tooltip.remove();
+            }
+            
+            // Restore title
+            if (e.target.getAttribute('data-title')) {
+                e.target.setAttribute('title', e.target.getAttribute('data-title'));
+                e.target.removeAttribute('data-title');
+            }
+        }
+
+        // Initialize all features
+        initTooltips();
     </script>
 </body>
 </html>

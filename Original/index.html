@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය</title>
+    <meta name="description" content="Vidura.lk - ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අත්දැකීම් සම්පන්න ගුරුවරුන්, නවීන පහසුකම්, සහ විශ්වාසදායක අධ්‍යාපන සේවාවන්.">
+    <meta name="keywords" content="Vidura.lk, අධ්‍යාපන, Sri Lanka, Tuition, School, Classes, ගුරුවරු, විද්‍යාව, ගණිතය, ඉංග්‍රීසි, Sinhala, French, Maths, Science, Education">
+    <meta name="author" content="Vidura.lk">
+    <meta property="og:title" content="Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය">
+    <meta property="og:description" content="ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අත්දැකීම් සම්පන්න ගුරුවරුන්, නවීන පහසුකම්, සහ විශ්වාසදායක අධ්‍යාපන සේවාවන්.">
+    <meta property="og:image" content="assets/ViduraLogoFinal.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vidura.lk/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vidura.lk - ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය">
+    <meta name="twitter:description" content="ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අත්දැකීම් සම්පන්න ගුරුවරුන්, නවීන පහසුකම්, සහ විශ්වාසදායක අධ්‍යාපන සේවාවන්.">
+    <meta name="twitter:image" content="assets/ViduraLogoFinal.png">
+    <link rel="canonical" href="https://vidura.lk/">
+    <link rel="icon" type="image/png" href="assets/ViduraFBProfile.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 50px; width: auto; display: inline-block; vertical-align: middle;" />
+            </div>
+            <button class="mobile-menu-btn" aria-label="මෙනුව විවෘත කරන්න" aria-controls="main-navigation" aria-expanded="false" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav id="main-navigation" aria-label="ප්‍රධාන මෙනුව">
+                <ul class="nav-menu">
+                    <li><a href="#home">මුල් පිටුව</a></li>
+                    <li><a href="#teachers">ගුරුවරු</a></li>
+                    <li><a href="#timetable">කාල සටහන</a></li>
+                    <li><a href="#content">අත්වැල</a></li>
+                    <li><a href="#contact">සම්බන්ධතා</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය</h1>
+            <p>අපගේ අත්දැකීම් සම්පන්න ගුරුවරුන් සමඟ ඔබේ අධ්‍යාපන සාර්ථකත්වය සහතික කරන්න</p>
+            <a href="#contact" class="cta-button">
+                <i class="fas fa-phone"></i> දැන්ම සම්බන්ධ වන්න
+            </a>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers" class="section">
+        <div class="container">
+            <h2 class="section-title">අපගේ ගුරුවරු</h2>
+            <div class="teachers-slider">
+                <div class="teachers-track">
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-name">සුනිල් ප්‍රේමසිරි</div>
+                        <div class="teacher-subject">ගණිතය</div>
+                        <div class="teacher-experience">15 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="teacher-name">නිමල්කා සිල්වා</div>
+                        <div class="teacher-subject">ඉංග්‍රීසි</div>
+                        <div class="teacher-experience">12 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="teacher-name">රනිල් ජයවර්ධන</div>
+                        <div class="teacher-subject">විද්‍යාව</div>
+                        <div class="teacher-experience">18 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="teacher-name">සාගරිකා රත්නායක</div>
+                        <div class="teacher-subject">සිංහල</div>
+                        <div class="teacher-experience">10 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="teacher-name">අමරසේන ගුණවර්ධන</div>
+                        <div class="teacher-subject">ප්‍රංශ</div>
+                        <div class="teacher-experience">8 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="teacher-name">චන්ද්‍රකුමාර පෙරේරා</div>
+                        <div class="teacher-subject">ගණන්</div>
+                        <div class="teacher-experience">14 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-name">සුනිල් ප්‍රේමසිරි</div>
+                        <div class="teacher-subject">ගණිතය</div>
+                        <div class="teacher-experience">15 වර්ෂ පළපුරුදු</div>
+                    </div>
+                    <div class="teacher-card">
+                        <div class="teacher-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="teacher-name">නිමල්කා සිල්වා</div>
+                        <div class="teacher-subject">ඉංග්‍රීසි</div>
+                        <div class="teacher-experience">12 වර්ෂ පළපුරුදු</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timetable Section -->
+    <section id="timetable" class="section">
+        <div class="container">
+            <h2 class="section-title">පන්ති කාල සටහන</h2>
+            <div class="timetable">
+                <div class="timetable-header">
+                    <i class="fas fa-calendar-alt"></i> සතියේ කාල සටහන
+                </div>
+                <div class="timetable-grid">
+                    <div class="time-slot">
+                        <div class="time-slot-time">8:00 AM - 10:00 AM</div>
+                        <div class="time-slot-subject">ගණිතය</div>
+                        <div class="time-slot-teacher">සුනිල් ප්‍රේමසිරි</div>
+                        <div class="time-slot-grade">10-11 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">10:00 AM - 12:00 PM</div>
+                        <div class="time-slot-subject">ඉංග්‍රීසි</div>
+                        <div class="time-slot-teacher">නිමල්කා සිල්වා</div>
+                        <div class="time-slot-grade">6-9 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">1:00 PM - 3:00 PM</div>
+                        <div class="time-slot-subject">විද්‍යාව</div>
+                        <div class="time-slot-teacher">රනිල් ජයවර්ධන</div>
+                        <div class="time-slot-grade">10-11 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">3:00 PM - 5:00 PM</div>
+                        <div class="time-slot-subject">සිංහල</div>
+                        <div class="time-slot-teacher">සාගරිකා රත්නායක</div>
+                        <div class="time-slot-grade">6-9 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">5:00 PM - 7:00 PM</div>
+                        <div class="time-slot-subject">ගණන්</div>
+                        <div class="time-slot-teacher">චන්ද්‍රකුමාර පෙරේරා</div>
+                        <div class="time-slot-grade">12-13 ශ්‍රේණි</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time-slot-time">7:00 PM - 9:00 PM</div>
+                        <div class="time-slot-subject">ප්‍රංශ</div>
+                        <div class="time-slot-teacher">අමරසේන ගුණවර්ධන</div>
+                        <div class="time-slot-grade">10-13 ශ්‍රේණි</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <!-- <section id="facilities" class="section">
+        <div class="container">
+            <h2 class="section-title">අපගේ පහසුකම්</h2>
+            <div class="facilities-grid">
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="facility-title">වායු සමීකරණ පන්ති කාමර</div>
+                    <div class="facility-description">සිසුන්ගේ පහසුව සඳහා සම්පූර්ණ වායු සමීකරණ පහසුකම් සහිත පන්ති කාමර</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="facility-title">වාහන නැවැත්වීමේ ස්ථානය</div>
+                    <div class="facility-description">ආරක්ෂිත හා විශාල වාහන නැවැත්වීමේ ප්‍රදේශය</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="facility-title">පුස්තකාලය</div>
+                    <div class="facility-description">සිසුන්ගේ අධ්‍යයන කටයුතු සඳහා විශාල පුස්තකාලයක්</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="facility-title">නොමිලේ WiFi</div>
+                    <div class="facility-description">සිසුන්ගේ අධ්‍යයන අවශ්‍යතා සඳහා නොමිලේ අන්තර්ජාල පහසුකම</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="facility-title">පරිගණක පහසුකම්</div>
+                    <div class="facility-description">නවීන පරිගණක සහ ප්‍රොජෙක්ටර් පහසුකම්</div>
+                </div>
+                <div class="card facility-card">
+                    <div class="facility-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="facility-title">ආපනශාලා</div>
+                    <div class="facility-description">සිසුන් සඳහා ආහාර පාන පහසුකම්</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Free Educational Content Section -->
+    <section id="content" class="section">
+        <div class="container">
+            <h2 class="section-title">අධ්‍යාපන අත්වැල</h2>
+            <div class="content-grid">
+                <a href="#" class="content-button">
+                    <i class="fas fa-calculator"></i>
+                    <div>ගණිතය</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-language"></i>
+                    <div>ඉංග්‍රීසි</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-atom"></i>
+                    <div>විද්‍යාව</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-book"></i>
+                    <div>සිංහල</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-globe-americas"></i>
+                    <div>ප්‍රංශ</div>
+                    <small>10-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-chart-bar"></i>
+                    <div>ගණන්</div>
+                    <small>12-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-history"></i>
+                    <div>ඉතිහාසය</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+                <a href="#" class="content-button">
+                    <i class="fas fa-map"></i>
+                    <div>භූගෝල විද්‍යාව</div>
+                    <small>6-13 ශ්‍රේණි</small>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">අප සමඟ සම්බන්ධ වන්න</h2>
+            <div class="card">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3 style="color: #4A90E2; margin-bottom: 1rem;">
+                            <i class="fas fa-phone"></i> සම්බන්ධතා විස්තර
+                        </h3>
+                        <p><i class="fas fa-map-marker-alt" style="color: #4A90E2; margin-right: 10px;"></i> 
+                        48/C, හයිලෙවල් පාර , කලුඅග්ගල , හංවැල්ල</p>
+                        <p><i class="fas fa-phone" style="color: #4A90E2; margin-right: 10px;"></i> 
+                        0785 861 696</p>
+                        <p><i class="fas fa-envelope" style="color: #4A90E2; margin-right: 10px;"></i> 
+                        info@vidura.lk</p>
+                    </div>
+                    <div>
+                        <h3 style="color: #4A90E2; margin-bottom: 1rem;">
+                            <i class="fas fa-paper-plane"></i> ක්ෂණික පණිවිඩයක් යවන්න
+                        </h3>
+                        <form style="display: flex; flex-direction: column; gap: 1rem;" aria-label="සම්බන්ධතා පෝරමය">
+                            <label for="name">ඔබේ නම</label>
+                            <input id="name" name="name" type="text" placeholder="ඔබේ නම" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                            <label for="phone">දුරකථන අංකය</label>
+                            <input id="phone" name="phone" type="tel" placeholder="දුරකථන අංකය" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                            <label for="grade">ශ්‍රේණිය තෝරන්න</label>
+                            <select id="grade" name="grade" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                                <option value="">ශ්‍රේණිය තෝරන්න</option>
+                                <option>6 ශ්‍රේණිය</option>
+                                <option>7 ශ්‍රේණිය</option>
+                                <option>8 ශ්‍රේණිය</option>
+                                <option>9 ශ්‍රේණිය</option>
+                                <option>10 ශ්‍රේණිය</option>
+                                <option>11 ශ්‍රේණිය</option>
+                                <option>12 ශ්‍රේණිය</option>
+                                <option>13 ශ්‍රේණිය</option>
+                            </select>
+                            <label for="message">ඔබේ පණිවිඩය</label>
+                            <textarea id="message" name="message" placeholder="ඔබේ පණිවිඩය" rows="4" required style="padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                            <button type="submit" class="cta-button" style="margin: 0;">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> පණිවිඩය යවන්න
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo" aria-label="පාදකය">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/ViduraLogoFinal.png" alt="Vidura.lk Logo" style="height: 80px; width: auto; display: block; margin: 0 auto 1rem;" />
+                    <p>ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ අධ්‍යාපන ආයතනය. අපි ඔබේ අධ්‍යාපන ඉලක්ක සාක්ෂාත් කර ගැනීමට උදව් කරමු.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>ඉක්මන් සබැඳි</h3>
+                    <a href="#home">මුල් පිටුව</a>
+                    <a href="#teachers">ගුරුවරු</a>
+                    <a href="#timetable">කාල සටහන</a>
+                    <a href="#facilities">පහසුකම්</a>
+                    <a href="#content">නොමිලේ අධ්‍යාපන</a>
+                </div>
+                <div class="footer-section">
+                    <h3>විෂයන්</h3>
+                    <a href="#">ගණිතය</a>
+                    <a href="#">ඉංග්‍රීසි</a>
+                    <a href="#">විද්‍යාව</a>
+                    <a href="#">සිංහල</a>
+                    <a href="#">ප්‍රංශ</a>
+                    <a href="#">ගණන්</a>
+                </div>
+                <div class="footer-section">
+                    <h3>සම්බන්ධතා</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 48/C, හයිලෙවල් පාර , කලුඅග්ගල , හංවැල්ල </p>
+                    <p><i class="fas fa-phone"></i> 0785 861 696</p>
+                    <p><i class="fas fa-envelope"></i> info@vidura.lk</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #555; padding-top: 1rem; margin-top: 2rem;">
+                <p>&copy; 2025 Vidura.lk. සියලුම හිමිකම් ආරක්ෂිතයි.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="fab scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/94785861696" class="fab whatsapp-fab" aria-label="WhatsApp Call">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+    <script>
+    // Mobile menu toggle for mobile nav
+    function toggleMobileMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('active');
+    }
+    // Optional: Close menu when clicking a link (for better UX)
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.remove('active');
+        });
+    });
+    </script>
+</body>
+</html>
