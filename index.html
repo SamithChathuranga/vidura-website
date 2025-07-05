@@ -115,7 +115,7 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #4FC3F7, #1565C0, #0D47A1);
+            background: linear-gradient(45deg, #ffffff, #1565C0, #0D47A1);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -221,6 +221,7 @@
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
+            position: relative;
         }
 
         .contact-card:hover {
@@ -690,7 +691,7 @@
             <!-- Call to Action -->
             <div class="cta-container">
                 <div class="cta-text">
-                    පංති කාල වේලාවන් වෙන්කිරීම සඳහා දැන්ම අමතන්න 
+                    ගුරුභවතුනි, ඔබගේ පංති කාල වේලාවන් වෙන්කිරීම සඳහා දැන්ම අමතන්න 
                 </div>
                 
                 <div class="phone-scroll" tabindex="0">
@@ -709,15 +710,18 @@
 
             <!-- Contact Information -->
             <div class="contact-info">
-                <div class="contact-card" onclick="window.open('mailto:info@vidura.lk')">
+                <div class="contact-card" style="height:150px; min-height:150px; max-width:100%; display:flex; flex-direction:column; justify-content:center; align-items:center;">
                     <i class="fas fa-envelope"></i>
                     <h3>ඊමේල්</h3>
                     <p>info@vidura.lk<br>විමසීම් සඳහා අප වෙත ලියන්න</p>
                 </div>
-                <div class="contact-card" onclick="window.open('https://maps.app.goo.gl/hivjV34Ydc3Ye3JG6')">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>ස්ථානය</h3>
-                    <p>කලුඅග්ගල ශාන්ත ජෝන් බොස්කෝ මහා විදුහල අසල <br>Click here for Google Map </p>
+                <div class="contact-card" style="padding:0; overflow:hidden; height:150px; min-height:150px; max-width:100%; cursor:pointer; position:relative;" onclick="window.open('https://maps.google.com/?q=6.918870898746068,80.10019591576622', '_blank')">
+                    <iframe title="Google Map Location" src="https://www.google.com/maps?q=6.918870898746068,80.10019591576622&z=17&output=embed" width="100%" height="150" style="border:0; display:block; pointer-events:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div style="padding:0.5rem 1rem; background:rgba(255,255,255,0.85); position:absolute; left:0; right:0; bottom:0; pointer-events:none;">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3 style="display:inline; font-size:1.1rem; font-weight:600; color:#0D47A1; margin-left:0.5rem;">ස්ථානය</h3>
+                        <div style="font-size:0.95rem; opacity:0.9; line-height:1.4;">කලුඅග්ගල ශාන්ත ජෝන් බොස්කෝ මහා විදුහල අසල<br>Google Map Preview</div>
+                    </div>
                 </div>
             </div>
             <div class="cta-text">
@@ -800,6 +804,12 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+
+    <!-- Compact Google Map Preview (Fixed) -->
+    <!-- <div id="mapPreview" style="position:fixed; bottom:2rem; left:2rem; width:320px; height:200px; z-index:1200; box-shadow:0 4px 24px rgba(0,0,0,0.25); border-radius:16px; overflow:hidden; background:#fff; border:1px solid #eee; display:flex; flex-direction:column;">
+        <button id="closeMapPreview" aria-label="Close map preview" style="align-self:flex-end; background:none; border:none; font-size:1.3rem; color:#333; cursor:pointer; margin:4px 8px 0 0; z-index:2;">&times;</button>
+        <iframe title="Google Map Preview" src="https://www.google.com/maps?q=6.664019,80.022964&z=17&output=embed" width="100%" height="100%" style="border:0; flex:1 1 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div> -->
 
     <script>
         // Loading screen
@@ -1170,6 +1180,11 @@
                 e.target.removeAttribute('data-title');
             }
         }
+
+        // Hide map preview on close button click
+        document.getElementById('closeMapPreview').addEventListener('click', function() {
+            document.getElementById('mapPreview').style.display = 'none';
+        });
 
         // Initialize all features
         initTooltips();
