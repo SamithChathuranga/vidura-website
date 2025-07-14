@@ -3,7 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vidura.lk - Coming Soon</title>
+    <title>Vidura.lk - Private Tuition Classes Hanwella, Kaluaggala, Kosgama, Avissawella, Kaduwela | A/L Maths, Science, Commerce</title>
+    <meta name="description" content="Vidura.lk offers private tuition classes in Hanwella, Kaluaggala, Kosgama, Avissawella, Kaduwela, Sri Lanka. Specializing in A/L Maths, Physics, Chemistry, Biology, Technology, ICT, Commerce subjects. Find the best teachers for your success.">
+    <meta name="keywords" content="Hanwella, Kaluaggala, Kosgama, Avissawella, Kaduwela, Sri Lanka, Tuition, Private Classes, A/L, Maths, Physics, Chemistry, Biology, Technology, ICT, Commerce, Teachers, Vidura.lk">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Vidura.lk - Private Tuition Classes in Hanwella, Kaluaggala, Kosgama, Avissawella, Kaduwela">
+    <meta property="og:description" content="Find top private tuition teachers for A/L Maths, Science, Commerce subjects in Hanwella, Kaluaggala, Kosgama, Avissawella, Kaduwela, Sri Lanka.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vidura.lk/">
+    <meta property="og:image" content="https://vidura.lk/assets/ViduraLogoFinal.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Vidura.lk",
+      "url": "https://vidura.lk/",
+      "logo": "https://vidura.lk/assets/ViduraLogoFinal.png",
+      "description": "Private tuition classes for A/L Maths, Physics, Chemistry, Biology, Technology, ICT, Commerce in Hanwella, Kaluaggala, Kosgama, Avissawella, Kaduwela, Sri Lanka.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hanwella, Kaluaggala, Kosgama, Avissawella, Kaduwela",
+        "addressCountry": "LK"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+94 78 586 1696",
+        "contactType": "Customer Service",
+        "email": "info@vidura.lk"
+      },
+      "areaServed": ["Hanwella", "Kaluaggala", "Kosgama", "Avissawella", "Kaduwela"],
+      "subjectOf": ["A/L Maths", "Physics", "Chemistry", "Biology", "Technology", "ICT", "Commerce"],
+      "provider": {
+        "@type": "Person",
+        "name": "Private Tuition Teachers"
+      }
+    }
+    </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -173,13 +208,15 @@
 
         .phone-track {
             display: flex;
+            width: 200%; /* Fix: ensure only one phone number is visible at a time */
             animation: infiniteScroll 8s linear infinite;
             white-space: nowrap;
         }
 
         .phone-item {
-            min-width: 100%;
-            display: flex;
+            width: 50%;
+            display: inline-flex; /* Fix: prevent icon/number overlap */
+            flex-shrink: 0;
             align-items: center;
             justify-content: center;
             gap: 1rem;
@@ -195,12 +232,7 @@
 
         @keyframes infiniteScroll {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+            100% { transform: translateX(-50%); } /* Fix: move only half the track width */
         }
 
         /* Contact Info Section */
@@ -588,6 +620,7 @@
             }
 
             .phone-item {
+                width: 100%; /* On mobile, each item takes full width */
                 font-size: 1.2rem;
             }
 
@@ -728,7 +761,7 @@
                 *වායු සමනය කරන ලද, උපරිම සිසුන් 35 ක් වූ කුඩා කණ්ඩායම් පංති සදහා පමණි. 
             </div>
             <!-- Facilities Slider -->
-            <!-- <div class="facilities-section">
+            <!-- <div class="facilities-section>
                 <h2 class="section-title">අපගේ පහසුකම්</h2>
                 <div class="slider-container">
                     <div class="slider" id="slider">
